@@ -14,6 +14,10 @@ public class Hello {
 		//TODO: need to add also native EmbeddedJBoss jars to the ignore list! They are renamed by Maven
 		EJB3StandaloneBootstrap.ignoredJars.add("rt.jar");
 		EJB3StandaloneBootstrap.ignoredJars.add("jfxrt.jar");
+		
+		//TODO: hack, need robust scanning. Doesn't work locally
+		System.setProperty("java.class.path", System.getProperty("java.class.path") + ";" + "lib/embedded-0.0.1-SNAPSHOT.jar");
+		System.out.println("Before scan classpath");
 		EJB3StandaloneBootstrap.scanClasspath();
 
 		System.out.println("DONE");
@@ -22,7 +26,6 @@ public class Hello {
 		CustomerDAOLocal local = (CustomerDAOLocal) ctx.lookup("CustomerDAOBean/local");
 		int id = local.createCustomer("hello");
 		System.out.println("Found: " + local.findCustomer(id).getName());
-		EJB3StandaloneBootstrap.shutdown();
 	}
 	
 	 public static InitialContext getInitialContext() throws Exception
