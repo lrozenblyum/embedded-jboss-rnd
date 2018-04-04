@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.leokom</groupId>
+  <artifactId>embedded</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <repositories>
+	  <repository>
+	  <id>jboss</id>
+	  <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
+	  </repository>
+  </repositories>
+  
+  <properties>
+  	 <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
+  <dependencies>
+	<!-- https://mvnrepository.com/artifact/jboss.jboss-embeddable-ejb3/hibernate-all -->
+	<dependency>
+	    <groupId>jboss.jboss-embeddable-ejb3</groupId>
+	    <artifactId>hibernate-all</artifactId>
+	    <version>1.0.0.Alpha9</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/jboss.jboss-embeddable-ejb3/jboss-ejb3-all -->
+<dependency>
+    <groupId>jboss.jboss-embeddable-ejb3</groupId>
+    <artifactId>jboss-ejb3-all</artifactId>
+    <version>1.0.0.Alpha9</version>
+</dependency>
+	
+  	<!-- https://mvnrepository.com/artifact/org.javassist/javassist -->
+<dependency>
+    <groupId>org.javassist</groupId>
+    <artifactId>javassist</artifactId>
+    <version>3.21.0-GA</version>
+</dependency>
+  	
+  	
+  	<!-- https://mvnrepository.com/artifact/jboss.jboss-embeddable-ejb3/thirdparty-all -->
+<dependency>
+    <groupId>jboss.jboss-embeddable-ejb3</groupId>
+    <artifactId>thirdparty-all</artifactId>
+    <version>1.0.0.Alpha9</version>
+</dependency>
+  	
+  </dependencies>
+</project>
